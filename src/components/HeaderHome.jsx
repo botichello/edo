@@ -70,8 +70,8 @@ export default function HeaderHome({ aboutRef, testimonialRef }) {
               <Box
                 component={"img"}
                 src={logo}
-                maxHeight={{ xs: 65, sm: 90, md: 110, lg: 140 }}
-                height={{ xs: 65, sm: 90, md: 120, lg: 140 }}
+                maxHeight={{ xs: 65, sm: 80, md: 100, lg: 120 }}
+                height={{ xs: 65, sm: 80, md: 100, lg: 120 }}
                 sx={{ flexGrow: 0 }}
               />
             </Link>
