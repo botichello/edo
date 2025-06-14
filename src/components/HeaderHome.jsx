@@ -131,8 +131,15 @@ export default function HeaderHome({ aboutRef, testimonialRef }) {
       2px 2px 6px rgba(0, 0, 0, 0.2),
       3px 3px 9px rgba(0, 0, 0, 0.3),
       4px 4px 12px rgba(0, 0, 0, 0.4),
-      5px 5px 15px rgba(0, 0, 0, 0.5)
+      5px 5px 15px rgba(0, 0, 0, 0.5),
+      6px 6px 18px rgba(0, 0, 0, 0.6)
       `,
+                boxShadow: `
+      0px 4px 6px rgba(0, 0, 0, 0.1),
+      0px 8px 10px rgba(0, 0, 0, 0.15),
+      0px 12px 16px rgba(0, 0, 0, 0.2),
+      0px 14px 18px rgba(0, 0, 0, 0.25)
+    `,
                 fontWeight: 650,
                 letterSpacing: 0.3,
               }}

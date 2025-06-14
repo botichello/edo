@@ -127,7 +127,7 @@ export default function HomePage() {
                 backgroundSize: { xs: "140% auto", sm: "100% auto" },
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center top",
-                opacity: { xs: 0.5, sm: 0.55 },
+                opacity: { xs: 0.4, sm: 0.45 },
               },
             }}
           ></Box>
