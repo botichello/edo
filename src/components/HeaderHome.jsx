@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import logo from "../images/edo_logo.png";
 
-export default function HeaderHome({ aboutRef, testimonialRef }) {
+export default function HeaderHome({ aboutRef, testimonialRef, planRef }) {
   const scrollToAbout = () => {
     if (aboutRef && aboutRef.current) {
       const position =
@@ -26,6 +26,13 @@ export default function HeaderHome({ aboutRef, testimonialRef }) {
         testimonialRef.current.getBoundingClientRect().top +
         window.pageYOffset -
         150;
+      window.scrollTo({ top: position, behavior: "smooth" });
+    }
+  };
+  const scrollToPlans = () => {
+    if (planRef && planRef.current) {
+      const position =
+        planRef.current.getBoundingClientRect().top + window.pageYOffset - 150;
       window.scrollTo({ top: position, behavior: "smooth" });
     }
   };
@@ -70,8 +77,8 @@ export default function HeaderHome({ aboutRef, testimonialRef }) {
               <Box
                 component={"img"}
                 src={logo}
-                maxHeight={{ xs: 65, sm: 80, md: 100, lg: 120 }}
-                height={{ xs: 65, sm: 80, md: 100, lg: 120 }}
+                maxHeight={{ xs: 70, sm: 85, md: 100, lg: 120 }}
+                height={{ xs: 70, sm: 85, md: 100, lg: 120 }}
                 sx={{ flexGrow: 0 }}
               />
             </Link>
@@ -80,7 +87,7 @@ export default function HeaderHome({ aboutRef, testimonialRef }) {
               onClick={scrollToAbout}
               sx={{
                 marginRight: "2%",
-                color: "#C98F2C",
+                color: "#C09338",
                 textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -101,7 +108,7 @@ export default function HeaderHome({ aboutRef, testimonialRef }) {
               onClick={scrollToTestimonials}
               sx={{
                 marginRight: "4%",
-                color: "#C98F2C",
+                color: "#C09338",
                 textShadow: `
       1px 1px 3px rgba(0, 0, 0, 0.1),
       2px 2px 6px rgba(0, 0, 0, 0.2),
@@ -119,11 +126,11 @@ export default function HeaderHome({ aboutRef, testimonialRef }) {
               Testimonials
             </Button>
             <Button
-              onClick={scrollToTestimonials}
+              onClick={scrollToPlans}
               variant={"contained"}
               sx={{
                 flexGrow: 0,
-                color: "#C98F2C",
+                color: "#C09338",
                 paddingY: { xs: 1, sm: 1.75 },
                 size: { xs: "medium", sm: "large", md: "large" },
                 textShadow: `
