@@ -127,9 +127,9 @@ export default function HomePage() {
                 minHeight: {
                   xs: "22.5rem",
                   sm: "30rem",
-                  md: "37.5rem",
-                  lg: "45rem",
-                  xl: "55rem",
+                  md: "40rem",
+                  lg: "50rem",
+                  xl: "60rem",
                 },
                 display: "flex",
                 alignItems: "center", // Vertical alignment
@@ -170,7 +170,7 @@ export default function HomePage() {
                         md: "65%",
                         lg: "60%",
                       },
-                      marginTop: { xs: "0%", sm: "5%", md: "5%", lg: "7%" },
+                      marginTop: { xs: "0%", sm: "2%", md: "2%", lg: "-5%" },
                       textAlign: "center",
                       display: "flex",
                       fontWeight: "750",
