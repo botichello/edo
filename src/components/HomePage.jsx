@@ -2,8 +2,9 @@ import React, { useRef, useEffect, useLayoutEffect, useState } from "react";
 import { Link as LinkRouter } from "react-router-dom";
 import HeaderHome from "./HeaderHome";
 import { useScroll } from "./ScrollContext";
+import IntroductionSection from "./IntroductionSection";
 import theme from "../theme";
-import edo_hero from "../images/hero_image.png";
+import edo_hero from "../images/hero_image_green_gradient.png";
 import {
   AppBar,
   Box,
@@ -142,11 +143,25 @@ export default function HomePage() {
                   right: 0,
                   bottom: 0,
                   backgroundImage: `url(${edo_hero})`,
-                  backgroundSize: { xs: "140% auto", sm: "100% auto" },
+                  backgroundSize: { xs: "140%", sm: "100%" },
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center top",
                   opacity: { xs: 0.4, sm: 0.45 },
+                  zIndex: 0,
                 },
+                "&::after": {
+                  content: '""',
+                  position: "absolute",
+                  top: "70%",
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  pointerEvents: "none", // Adjust to control how much gradient appears
+                  background:
+                    "linear-gradient(to bottom, rgba(99, 46, 10, 0) 0%, #051D13 100%)",
+                  zIndex: 2,
+                },
+                zIndex: 0,
               }}
             >
               <Stack
@@ -170,7 +185,7 @@ export default function HomePage() {
                         md: "65%",
                         lg: "60%",
                       },
-                      marginTop: { xs: "0%", sm: "2%", md: "2%", lg: "-5%" },
+                      marginTop: { xs: "4%", sm: "4%", md: "4%", lg: "1%" },
                       textAlign: "center",
                       display: "flex",
                       fontWeight: "750",
@@ -223,6 +238,51 @@ export default function HomePage() {
               </Stack>
             </Box>
           </Fade>
+          <Stack
+            sx={{
+              // #382145
+              width: "100%",
+              backgroundColor: "#041C12",
+              background:
+                "linear-gradient(to bottom, #041C12 0%, #03120B 100%)",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <Stack
+              sx={{
+                alignItems: "center",
+                justifyContent: "center",
+                display: "flex",
+                width: "100%",
+              }}
+            >
+              <Typography
+                variant="h3"
+                ref={aboutRef}
+                sx={{
+                  color: "#C09338",
+                  textAlign: "center",
+                  display: "flex",
+                  fontWeight: "750",
+                  paddingTop: { xs: 4, sm: 6, md: 8 },
+                  paddingBottom: { xs: 6, sm: 8, md: 10, xl: 12 },
+                  textShadow: `
+      1px 1px 3px rgba(0, 0, 0, 0.1),
+      2px 2px 6px rgba(0, 0, 0, 0.2),
+      3px 3px 9px rgba(0, 0, 0, 0.3),
+      4px 4px 12px rgba(0, 0, 0, 0.4),
+      5px 5px 15px rgba(0, 0, 0, 0.5),
+      6px 6px 18px rgba(0, 0, 0, 0.6),
+      7px 7px 21px rgba(0, 0, 0, 0.7)
+    `,
+                }}
+              >
+                Welcome Summoner!
+              </Typography>
+            </Stack>
+            <IntroductionSection />
+          </Stack>
         </Stack>
       </Stack>
     </div>
