@@ -28,10 +28,15 @@ const IntroductionSection = () => {
             component={"img"}
             src={videoThumbnail}
             border={1.5}
-            borderColor={"#CBC2D7"}
+            borderColor={"primary.secondary"}
             //
             sx={{
-              width: "calc(100% - 48px)",
+              width: {
+                xs: "calc(85% - 48px)",
+                sm: "calc(85% - 48px)",
+                md: "calc(100% - 48px)",
+                lg: "calc(100% - 48px)",
+              },
               height: "auto",
               overflow: "hidden",
               borderRadius: "10px",
@@ -64,12 +69,12 @@ const IntroductionSection = () => {
               // Create the overlay
               content: '""',
               position: "absolute",
-              top: 20,
+              top: 40,
               left: 0,
               right: 0,
               bottom: 0,
               backgroundImage: `url(${qiyana_battle_queen})`,
-              backgroundSize: { xs: "40%", sm: "30%", md: "40%" },
+              backgroundSize: { xs: "35%", sm: "27.5%", md: "40%" },
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
               opacity: 0.265, // Set the desired opacity
@@ -91,7 +96,7 @@ const IntroductionSection = () => {
             <Typography
               variant="h4"
               sx={{
-                color: "#C09338",
+                color: "primary.secondary",
                 textAlign: "center",
                 display: "flex",
                 fontWeight: "750",
@@ -122,7 +127,7 @@ const IntroductionSection = () => {
             <Typography
               variant="h5"
               sx={{
-                color: "#C09338",
+                color: "primary.secondary",
                 textAlign: "center",
                 display: "flex",
                 fontWeight: "750",
@@ -138,12 +143,12 @@ const IntroductionSection = () => {
 `,
               }}
             >
-              I am a top 0,5% midlaner.
+              I am a top 0.1% midlaner.
             </Typography>
             <Typography
               variant="h5"
               sx={{
-                color: "#C09338",
+                color: "primary.secondary",
                 display: "flex",
                 fontWeight: "750",
                 paddingTop: 3,
@@ -158,12 +163,12 @@ const IntroductionSection = () => {
 `,
               }}
             >
-              played over 4000 hours on Qiyana.
+              Played 4000+ hours on Qiyana.
             </Typography>
             <Typography
               variant="h5"
               sx={{
-                color: "#C09338",
+                color: "primary.secondary",
                 display: "flex",
                 fontWeight: "750",
                 textAlign: {

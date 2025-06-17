@@ -176,7 +176,7 @@ export default function HomePage() {
                     component="div"
                     variant={typographyVariant}
                     sx={{
-                      color: "#C09338",
+                      color: "primary.secondary",
                       position: "relative",
                       zIndex: 2,
                       maxWidth: {
@@ -185,7 +185,7 @@ export default function HomePage() {
                         md: "65%",
                         lg: "60%",
                       },
-                      marginTop: { xs: "4%", sm: "4%", md: "4%", lg: "1%" },
+                      marginTop: { xs: "4%", sm: "8%", md: "14%", lg: "1%" },
                       textAlign: "center",
                       display: "flex",
                       fontWeight: "750",
@@ -209,7 +209,7 @@ export default function HomePage() {
                     variant={"contained"}
                     sx={{
                       flexGrow: 0,
-                      color: "#C09338",
+                      color: "primary.secondary",
                       paddingY: { xs: 1.2, sm: 1.55 },
                       marginTop: { xs: "3%", sm: "3%", md: "3%", lg: "3%" },
                       size: { xs: "medium", sm: "large", md: "large" },
@@ -244,7 +244,7 @@ export default function HomePage() {
               width: "100%",
               backgroundColor: "#041C12",
               background:
-                "linear-gradient(to bottom, #041C12 0%, #03120B 100%)",
+                "linear-gradient(to bottom, #041C12 0%, #08301F 100%)",
               justifyContent: "center",
               alignItems: "center",
             }}
